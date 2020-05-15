@@ -121,7 +121,7 @@ header .navBar a:last-of-type {
 .artists-container {
   display: flex;
   justify-content: center;
-  margin: 3% 5%;
+  margin-top: 3% 5%;
   justify-content: space-around;
   border-top: solid black 2px;
   padding-top: 2%;
@@ -129,8 +129,8 @@ header .navBar a:last-of-type {
 @media (max-width: 500px) {
   .artists-container {
     flex-direction: column;
-    padding: 8% 20%;
-    margin-top: 3% 0;
+    padding: 8% 10%;
+    margin-top: 3%;
   }
 }
 .artist {
