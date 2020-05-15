@@ -86,3 +86,41 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  padding: 40px 0 10px 0;
+}
+header .navBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .navBar a {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+}
+header .navBar a:first-of-type {
+  border-right: solid black 2px;
+  font-weight: bold;
+}
+header .navBar a:last-of-type {
+  border-left: solid black 2px;
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-container h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  text-align: center;
+}
