@@ -1,17 +1,14 @@
 
 header{
     width: 100%;
-    padding: 40px 0 10px 0;
+    padding: 40px 0 40px 0;
 
     .navBar {
         .center();
         width: 100%;
 
         a {
-            font-size: 1.5rem;
-            color: @nav-color;
-            text-decoration: none;
-            padding: 0 10px 0 10px;
+            .link-format();
 
             &:first-of-type {
                 border-right: solid @nav-color 2px;
@@ -20,6 +17,10 @@ header{
 
             &:last-of-type {
                 border-left: solid @nav-color 2px;
+            }
+
+            @media @mobile {
+                font-size: 1.2rem;
             }
         }
     }
