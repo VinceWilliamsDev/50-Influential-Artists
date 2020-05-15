@@ -1,3 +1,5 @@
+// console.log("hello world");
+
 const artists = [
     {
       "id": 0,
@@ -207,11 +209,18 @@ const artists = [
 
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
+console.log("Task 1");
 
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+console.log("Task 2");
 
+artists[8].name = "Vincent Van Gogh";
+
+console.log(artists[8].name);
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -222,10 +231,15 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+
+console.log("Task 3");
+
+function getArtistByIndex(arrayName, id ) {
+    return `The artist at index ${id} is ${arrayName[id].name}`;
   }
   
+console.log(getArtistByIndex(artists, 0));
+
   /**
 
 
@@ -237,21 +251,38 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+
+console.log("Task 4");
+
+
+function removeArtist(arrayName, id) {
+    arrayName.splice(id, 1);
   }
   
+  removeArtist(artists, 0);
+
+  console.log(artists);
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+console.log("Task 5");
 
-    /* Code here */
 
+function lotsOfArt(arrayName){
+    prolificArtists =[];
+
+    for (let i=0; i < arrayName.length; i++) {
+      if (arrayName[i].paintings > 100) {
+        prolificArtists.push(arrayName[i].name);
+      }
+    }
+
+    return prolificArtists;
   }
 
+  console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -262,13 +293,23 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+console.log("Task 6");
 
-    /* Code here */
+const me = ["Vince Williams", "1986 - current", "Web Design", "USA", "Known for his beutiful websites, Vince Williams is adored by many fans around the globe!"];
+
+function addArtist(newArtist){
+  artists.push({id: artists.length + 1,
+    name: newArtist[0],
+    years: newArtist[1],
+    genre: newArtist[2],
+    nationality: newArtist[3],
+    bio: newArtist[4]});
 
   }
 
+addArtist(me);
 
+console.log(artists[artists.length - 1]);
 
 
 

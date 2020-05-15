@@ -1,0 +1,22 @@
+.center() {
+    display: flex;
+    justify-content: center;
+}
+
+.link-format() {
+    font-size: 1.5rem;
+    color: @nav-color;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+}
+
+.button-styles(@fontSize: 1.8rem, @fontFamily: @main-font) {
+    padding: 1% 3%;
+    border-radius: 8px;
+    font-size: @fontSize;
+    font-family: @fontFamily;
+
+    @media @mobile {
+        font-size: 1rem;
+    }
+}
