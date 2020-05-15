@@ -1,3 +1,5 @@
+console.log("hello world");
+
 const artists = [
     {
       "id": 0,
